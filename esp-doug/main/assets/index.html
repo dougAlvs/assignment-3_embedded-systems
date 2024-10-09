@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuração Wi-Fi</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function showPopup(isSuccess) {
+            var popup = document.getElementById("popup");
+            var popupMessage = document.getElementById("popup-message");
+            var message = isSuccess ? "Configurações recebidas. Reiniciando o dispositivo." : "Falha ao salvar as configurações.";
+            popupMessage.innerText = message;
+            popup.style.display = 'block';
+            if (isSuccess) {
+                var timer = 5; // Tempo do contador em segundos
+                var countdown = document.getElementById("popup-countdown");
+                var interval = setInterval(function() {
+                    countdown.innerText = timer;
+                    timer--;
+                    if (timer < 0) {
+                        clearInterval(interval);
+                        window.location.href = '/restart';
+                    }
+                }, 1000);
+            }
+        }
+
+        function togglePassword() {
+            const passwordField = document.getElementById('password');
+            const passwordButton = document.querySelector('.password-container button img');
+            if (passwordField.type === 'password') {
+                passwordField.type = 'text';
+                passwordButton.src = './eye-icon-open.png'; // Muda o ícone para algo que indique que a senha está visível
+            } else {
+                passwordField.type = 'password';
+                passwordButton.src = './eye-icon.png'; // Muda o ícone para o olho
+            }
+        }
+
+
+        window.onload = function() {
+            var params = new URLSearchParams(window.location.search);
+            var message = params.get('message');
+            var success = params.get('success') === 'true';
+            // Verifica se o parâmetro `success` está presente e é válido
+            if (params.has('success')) {
+                showPopup(success);
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Configuração Wi-Fi</h1>
+        <form action="/set_wifi" method="post">
+            <label for="ssid">SSID:</label>
+            <input type="text" id="ssid" name="ssid">
+            <label for="password">Senha:</label>
+            <div class="password-container">
+                <input type="password" id="password" name="password" class="password-field" />
+                <button type="button" onclick="togglePassword()" class="password-toggle-button">
+                    <img id="password-icon" src="./eye-icon.png" alt="Mostrar/Ocultar Senha" />
+                </button>
+            </div>
+            <input type="submit" value="Salvar Credenciais">
+        </form>
+    </div>
+
+    <!-- Popup para mensagens -->
+    <div id="popup" class="popup">
+        <div id="popup-header">Info</div>
+        <div id="popup-content">
+            <p id="popup-message"></p>
+            <p id="popup-countdown"></p>
+        </div>
+    </div>
+</body>
+</html>

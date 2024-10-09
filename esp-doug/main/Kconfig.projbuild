@@ -1,0 +1,22 @@
+menu "Configuração do Wifi"
+
+    config ESP_CONFIG_WIFI_SSID
+        string "SSID do WiFi de Configuração"
+        default "ESP32_Setup"
+        help
+            SSID da rede WiFi para configurar o WiFi da ESP32.
+    
+    config ESP_CONFIG_WIFI_PASSWORD
+        string "Senha do Wifi de Configuração"
+        default "12345678"
+        help
+            Senha da rede WiFi para configurar o WiFi da ESP32.
+
+    config WIFI_MAXIMUM_RETRY
+        int "Número máximo de tentativas de conexão"
+        default 5
+        help
+            Configure o valor máximo de tentativas de conexão.
+    
+    endmenu
+    

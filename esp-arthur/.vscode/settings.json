@@ -1,0 +1,32 @@
+{
+    "C_Cpp.intelliSenseEngine": "default",
+    "idf.adapterTargetName": "esp32",
+    "idf.customExtraPaths": "/home/arthurgrandao/.espressif/tools/xtensa-esp-elf-gdb/14.2_20240403/xtensa-esp-elf-gdb/bin:/home/arthurgrandao/.espressif/tools/riscv32-esp-elf-gdb/14.2_20240403/riscv32-esp-elf-gdb/bin:/home/arthurgrandao/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20240530/xtensa-esp-elf/bin:/home/arthurgrandao/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20240530/riscv32-esp-elf/bin:/home/arthurgrandao/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin:/home/arthurgrandao/.espressif/tools/cmake/3.24.0/bin:/home/arthurgrandao/.espressif/tools/openocd-esp32/v0.12.0-esp32-20240318/openocd-esp32/bin:/home/arthurgrandao/.espressif/tools/ninja/1.11.1:/home/arthurgrandao/.espressif/tools/esp-rom-elfs/20240305",
+    "idf.customExtraVars": {
+        "OPENOCD_SCRIPTS": "/home/arthurgrandao/.espressif/tools/openocd-esp32/v0.12.0-esp32-20240318/openocd-esp32/share/openocd/scripts",
+        "ESP_ROM_ELF_DIR": "/home/arthurgrandao/.espressif/tools/esp-rom-elfs/20240305/"
+    },
+    "idf.espIdfPath": "/home/arthurgrandao/esp/v5.3/esp-idf",
+    "idf.openOcdConfigs": [
+        "board/esp32-wrover-kit-3.3v.cfg"
+    ],
+    "idf.port": "/dev/ttyUSB0",
+    "idf.pythonBinPath": "/home/arthurgrandao/.espressif/python_env/idf5.3_py3.10_env/bin/python",
+    "idf.toolsPath": "/home/arthurgrandao/.espressif",
+    "idf.gitPath": "/usr/bin/git",
+    "idf.flashType": "UART",
+    "cmake.configureOnOpen": true,
+    "files.associations": {
+        "event_groups.h": "c",
+        "mqtt.h": "c",
+        "timer.h": "c",
+        "string.h": "c",
+        "freertos.h": "c",
+        "esp_sleep.h": "c",
+        "esp_mac.h": "c",
+        "esp_timer.h": "c",
+        "esp_http_client.h": "c",
+        "semphr.h": "c",
+        "wifi.h": "c"
+    }
+}

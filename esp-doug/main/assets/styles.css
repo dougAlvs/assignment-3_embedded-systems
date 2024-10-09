@@ -1,0 +1,139 @@
+/* Definições gerais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Estilo para o container principal */
+.container {
+    background-color: #ffffff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+/* Estilo para o título */
+h1 {
+    font-size: 24px;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+/* Estilo para os rótulos dos inputs */
+label {
+    display: block;
+    margin-top: 15px;
+    font-size: 14px;
+    text-align: left;
+}
+
+/* Estilo para os campos de texto */
+input[type="text"], input[type="password"] {
+    width: calc(100% - 40px); /* Ajusta a largura para deixar espaço para o botão */
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+    flex: 1;
+    margin-right: 40px;
+    padding-right: 14px;
+}
+/* Estilo para o botão de envio */
+input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+/* Efeito hover no botão */
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Estilo para mensagens de erro (caso você queira adicionar no futuro) */
+.error {
+    color: red;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+/* Popup */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 400px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    text-align: center;
+    padding: 0; /* Remove o padding do popup */
+}
+
+/* Header do popup */
+#popup-header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border-radius: 8px 8px 0 0;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0; /* Remove a margem para alinhar com o resto do popup */
+}
+
+/* Conteúdo do popup */
+#popup-content {
+    padding: 20px; /* Adiciona padding ao conteúdo */
+    margin: 0;
+}
+
+/* Contador do popup */
+#popup-countdown {
+    font-size: 16px;
+    color: #555;
+}
+
+
+.password-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.password-container button {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.password-container button img {
+    width: 24px; /* Ajusta a largura do ícone conforme necessário */
+    height: 24px; /* Ajusta a altura do ícone conforme necessário */
+}
